@@ -2,9 +2,9 @@ pragma solidity 0.5.8;
 
 contract IERC1271 {
   function isValidSignature(
-    bytes memory _data, 
+    bytes32 _messageHash,
     bytes memory _signature)
     public
-    view 
+    view
     returns (bytes4 magicValue);
 }

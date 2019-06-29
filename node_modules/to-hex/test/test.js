@@ -1,0 +1,27 @@
+const test = require('tape')
+const BN = require('bn.js')
+const { randomBytes } = require('crypto')
+const toHex = require('../')
+
+test('toHex', t => {
+  t.plan(16)
+
+  t.equal(toHex({}), '')
+  t.equal(toHex(), '')
+  t.equal(toHex(''), '')
+  t.equal(toHex(256), '100')
+  t.equal(toHex(256, { size: 6 }).endsWith('100'), true)
+  t.equal(toHex(256, { size: 6 }).length, 6)
+  t.equal(toHex(256, { addPrefix: true }), '0x100')
+  t.equal(toHex('0x0100', { addPrefix: true }), '0x0100')
+  t.equal(toHex('0x0100'), '0100')
+  t.equal(toHex('abc'), '616263')
+  t.equal(toHex('ABC'), '414243')
+  t.equal(toHex(256), '100')
+  t.equal(toHex(256, { evenLength: true }), '0100')
+  t.equal(toHex(new BN(256)), '100')
+  t.equal(toHex(new BN('100', 16)), '100')
+
+  const bytes = randomBytes(10)
+  t.equal(toHex(bytes), bytes.toString('hex'))
+})

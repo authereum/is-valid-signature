@@ -1,15 +1,30 @@
 {
   "name": "is-valid-signature",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "truffle test"
   },
-  "author": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/authereum/is-valid-signature"
+  },
+  "bugs": {
+    "url": "https://github.com/authereum/is-valid-signature/issues"
+  },
+  "homepage": "https://github.com/authereum/is-valid-signature",
+  "author": {
+    "name": "Chris Whinfrey",
+    "email": "",
+    "url": "https://authereum.org/"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/authereum/is-valid-signature/blob/master/LICENSE"
+  },
   "dependencies": {
-    "@authereum/utils": "0.0.1",
+    "@authereum/utils": "0.0.1-beta.0",
     "chai": "^4.2.0",
     "ethereumjs-util": "^6.1.0",
     "mocha": "^6.1.4",
@@ -18,5 +33,10 @@
     "truffle-contract": "^4.0.22",
     "web3": "^1.0.0-beta.55",
     "web3-utils": "^1.0.0-beta.55"
-  }
+  },
+  "keywords": [
+    "ethereum",
+    "signature",
+    "erc1271"
+  ]
 }
