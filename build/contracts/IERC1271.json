@@ -6,7 +6,7 @@
       "inputs": [
         {
           "name": "_messageHash",
-          "type": "bytes32"
+          "type": "bytes"
         },
         {
           "name": "_signature",
@@ -25,25 +25,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_messageHash\",\"type\":\"bytes32\"},{\"name\":\"_signature\",\"type\":\"bytes\"}],\"name\":\"isValidSignature\",\"outputs\":[{\"name\":\"magicValue\",\"type\":\"bytes4\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/cwhinfrey/projects/ethereum/0trust/authereum/is-valid-signature/contracts/IERC1271.sol\":\"IERC1271\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/cwhinfrey/projects/ethereum/0trust/authereum/is-valid-signature/contracts/IERC1271.sol\":{\"keccak256\":\"0x0fffc66c91c437e7c8d5947839e52edca0c3f49dbab1fd4f9abe5d50af86ab1b\",\"urls\":[\"bzzr://9ac3b58633d3121d5cff9f2c7089088c969e0b50d2f324c005692fe5da67b28d\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_messageHash\",\"type\":\"bytes\"},{\"name\":\"_signature\",\"type\":\"bytes\"}],\"name\":\"isValidSignature\",\"outputs\":[{\"name\":\"magicValue\",\"type\":\"bytes4\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/cwhinfrey/projects/ethereum/0trust/authereum/is-valid-signature/contracts/IERC1271.sol\":\"IERC1271\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/cwhinfrey/projects/ethereum/0trust/authereum/is-valid-signature/contracts/IERC1271.sol\":{\"keccak256\":\"0x2182a9e426113635e0dcf3a1c3b346a708b5cef4bb8fbdd496bbe3d10fd8e1de\",\"urls\":[\"bzzr://b4d3578bc9118ef90fe3432637c6e28fcfac5c28072c09b69987bd52fc311c47\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.5.8;\n\ncontract IERC1271 {\n  function isValidSignature(\n    bytes32 _messageHash,\n    bytes memory _signature)\n    public\n    view\n    returns (bytes4 magicValue);\n}",
+  "source": "pragma solidity 0.5.8;\n\ncontract IERC1271 {\n  function isValidSignature(\n    bytes memory _messageHash,\n    bytes memory _signature)\n    public\n    view\n    returns (bytes4 magicValue);\n}",
   "sourcePath": "/Users/cwhinfrey/projects/ethereum/0trust/authereum/is-valid-signature/contracts/IERC1271.sol",
   "ast": {
     "absolutePath": "/Users/cwhinfrey/projects/ethereum/0trust/authereum/is-valid-signature/contracts/IERC1271.sol",
     "exportedSymbols": {
       "IERC1271": [
-        76
+        51
       ]
     },
-    "id": 77,
+    "id": 52,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 66,
+        "id": 41,
         "literals": [
           "solidity",
           "0.5",
@@ -58,9 +58,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 76,
+        "id": 51,
         "linearizedBaseContracts": [
-          76
+          51
         ],
         "name": "IERC1271",
         "nodeType": "ContractDefinition",
@@ -68,49 +68,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 75,
+            "id": 50,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isValidSignature",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 71,
+              "id": 46,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 68,
+                  "id": 43,
                   "name": "_messageHash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 75,
-                  "src": "77:20:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 67,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "77:7:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 70,
-                  "name": "_signature",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 75,
-                  "src": "103:23:1",
+                  "scope": 50,
+                  "src": "77:25:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -118,10 +92,36 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 69,
+                    "id": 42,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "103:5:1",
+                    "src": "77:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 45,
+                  "name": "_signature",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "108:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 44,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "108:5:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -131,19 +131,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "71:56:1"
+              "src": "71:61:1"
             },
             "returnParameters": {
-              "id": 74,
+              "id": 49,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 73,
+                  "id": 48,
                   "name": "magicValue",
                   "nodeType": "VariableDeclaration",
-                  "scope": 75,
-                  "src": "161:17:1",
+                  "scope": 50,
+                  "src": "166:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -151,10 +151,10 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 72,
+                    "id": 47,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "161:6:1",
+                    "src": "166:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -164,33 +164,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "160:19:1"
+              "src": "165:19:1"
             },
-            "scope": 76,
-            "src": "46:134:1",
+            "scope": 51,
+            "src": "46:139:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 77,
-        "src": "24:158:1"
+        "scope": 52,
+        "src": "24:163:1"
       }
     ],
-    "src": "0:182:1"
+    "src": "0:187:1"
   },
   "legacyAST": {
     "absolutePath": "/Users/cwhinfrey/projects/ethereum/0trust/authereum/is-valid-signature/contracts/IERC1271.sol",
     "exportedSymbols": {
       "IERC1271": [
-        76
+        51
       ]
     },
-    "id": 77,
+    "id": 52,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 66,
+        "id": 41,
         "literals": [
           "solidity",
           "0.5",
@@ -205,9 +205,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 76,
+        "id": 51,
         "linearizedBaseContracts": [
-          76
+          51
         ],
         "name": "IERC1271",
         "nodeType": "ContractDefinition",
@@ -215,49 +215,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 75,
+            "id": 50,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isValidSignature",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 71,
+              "id": 46,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 68,
+                  "id": 43,
                   "name": "_messageHash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 75,
-                  "src": "77:20:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 67,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "77:7:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 70,
-                  "name": "_signature",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 75,
-                  "src": "103:23:1",
+                  "scope": 50,
+                  "src": "77:25:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -265,10 +239,36 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 69,
+                    "id": 42,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "103:5:1",
+                    "src": "77:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 45,
+                  "name": "_signature",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "108:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 44,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "108:5:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -278,19 +278,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "71:56:1"
+              "src": "71:61:1"
             },
             "returnParameters": {
-              "id": 74,
+              "id": 49,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 73,
+                  "id": 48,
                   "name": "magicValue",
                   "nodeType": "VariableDeclaration",
-                  "scope": 75,
-                  "src": "161:17:1",
+                  "scope": 50,
+                  "src": "166:17:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -298,10 +298,10 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 72,
+                    "id": 47,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "161:6:1",
+                    "src": "166:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -311,28 +311,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "160:19:1"
+              "src": "165:19:1"
             },
-            "scope": 76,
-            "src": "46:134:1",
+            "scope": 51,
+            "src": "46:139:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 77,
-        "src": "24:158:1"
+        "scope": 52,
+        "src": "24:163:1"
       }
     ],
-    "src": "0:182:1"
+    "src": "0:187:1"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.10",
-  "updatedAt": "2019-06-29T04:43:01.858Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-29T19:00:23.702Z",
   "devdoc": {
     "methods": {}
   },

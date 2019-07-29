@@ -17,7 +17,7 @@ contract AccountMock is IERC1271 {
   }
 
   function isValidSignature(
-    bytes32 _data,
+    bytes memory _data,
     bytes memory _signature
   )
     public

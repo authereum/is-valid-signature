@@ -50,7 +50,7 @@ const isValid = await isValidSignature(web3, contract.address, message, signatur
 ```
 contract ERC1271 {
   function isValidSignature(
-    bytes32 _messageHash,
+    bytes memory _messageHash,
     bytes memory _signature)
     public
     view
