@@ -1,3 +1,15 @@
+1.2.0 / 2019-07-24
+=================
+  * [New] add `auto` entry point
+  * [Deps] update `define-properties`, `es-abstract`, `function-bind`
+  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `covert`, `replace`, `semver`, `tape`; remove `jscs`
+  * [Tests] fix tests for the mongolian vowel separator
+  * [Tests] up to `node` `v12.6`, `v11.15`, `v10.16`, `v9.11`, `v8.16`, `v7.10`, `v6.17`, `v5.12`, `4.9`; use `nvm install-latest-npm`
+  * [Tests] use `npx aud` instead of `nsp` or `npm audit` with hoops
+  * [Tests] use `functions-have-names`
+  * [Tests] use pretest/posttest for linting/security
+  * [meta] Only apps should have lockfiles
+
 1.1.2 / 2016-02-06
 =================
   * Use the polyfill, not the implementation, as the default export.
