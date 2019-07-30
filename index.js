@@ -1,10 +1,16 @@
 const utils = require('@authereum/utils')
+const web3Utils = require('web3-utils')
 const truffleContract = require('truffle-contract')
 const IERC1271Artifact = require('./build/contracts/IERC1271.json')
 
 const MAGICVALUE = '0x20c13b0b';
 
 async function isValidSignature(web3, signerAddress, message, signature) {
+
+  // If message is not hex, convert it to hex
+  if (!web3Utils.isHexStrict(message)) {
+    message = web3Utils.stringToHex(message)
+  }
 
   const bytecode = await web3.eth.getCode(signerAddress)
 

@@ -7,25 +7,43 @@ const web3Utils = require('web3-utils')
 
 const AccountMock = artifacts.require('AccountMock')
 
-const message = utils.soliditySha3("Hello world")
-
 contract('isValidSignature', (accounts) => {
 
-  let signer, signature
+  let signer, message, messageHash, messageSignature, messageHashSignature
   beforeEach(async () => {
     signer = accounts[0]
-    signature = await web3.eth.sign(message, signer)
-    signature = normalizeSignature(signature)
+    message = "Hello world"
+    messageHash = await utils.soliditySha3(message)
+
+    messageSignature = await web3.eth.sign(message, signer)
+    messageSignature = normalizeSignature(messageSignature)
+
+    messageHashSignature = await web3.eth.sign(messageHash, signer)
+    messageHashSignature = normalizeSignature(messageHashSignature)
   })
 
-  it('should check externally owned account signature', async () => {
-    expect(await isValidSignature(web3, signer, message, signature)).to.equal(true)
+  describe('when signing a hash', () => {
+    it('should check externally owned account signature', async () => {
+      expect(await isValidSignature(web3, signer, messageHash, messageHashSignature)).to.equal(true)
+    })
+  
+    it('should check ERC1271 signature', async () => {
+      contract = await AccountMock.new(signer)
+      expect(await isValidSignature(web3, contract.address, messageHash, messageHashSignature)).to.equal(true)
+    })  
   })
 
-  it('should check ERC1271 signature', async () => {
-    contract = await AccountMock.new(signer)
-    expect(await isValidSignature(web3, contract.address, message, signature)).to.equal(true)
+  describe('when signing a string', () => {
+    it('should check externally owned account signature', async () => {
+      expect(await isValidSignature(web3, signer, message, messageSignature)).to.equal(true)
+    })
+  
+    it('should check ERC1271 signature', async () => {
+      contract = await AccountMock.new(signer)
+      expect(await isValidSignature(web3, contract.address, message, messageSignature)).to.equal(true)
+    })  
   })
+  
 })
 
 const normalizeSignature = (signature) => {
