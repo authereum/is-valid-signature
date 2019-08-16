@@ -14,7 +14,7 @@ async function isValidSignature(web3, signerAddress, message, signature) {
 
   const bytecode = await web3.eth.getCode(signerAddress)
 
-  if (!bytecode || bytecode === '0x') {
+  if (!bytecode || bytecode === '0x' || bytecode === '0x0' || bytecode === '0x00') {
     const prefixedMessageHash = utils.keccack256WithPrefix(message)
     const msgSigner = utils.ecrecover(prefixedMessageHash, signature)
     return msgSigner.toLowerCase() === signerAddress.toLowerCase()
