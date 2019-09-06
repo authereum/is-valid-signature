@@ -33,7 +33,7 @@ const isValidSignature = require('is-valid-signature')
 const signer = YOUR_SIGNER_ADDRESS
 
 // Get contract where `signer` can sign on behalf of contract
-const contract = ERC-1271.at(YOUR_CONTRACT_ADDRESS)
+const contract = ERC1271.at(YOUR_CONTRACT_ADDRESS)
 
 // Get a signature
 const message = web3.utils.soliditySha3("Hello world")
