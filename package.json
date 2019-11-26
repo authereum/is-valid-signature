@@ -1,6 +1,6 @@
 {
   "name": "is-valid-signature",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "ERC-1271 - Check if signature is valid for EOA address or contract-based account",
   "main": "index.js",
   "types": "index.d.ts",
@@ -24,7 +24,7 @@
     "type": "MIT",
     "url": "https://github.com/authereum/is-valid-signature/blob/master/LICENSE"
   },
-  "devDependencies": {
+  "dependencies": {
     "web3": "^1.2.4"
   },
   "devDependencies": {
