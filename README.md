@@ -22,7 +22,7 @@ const message = web3.utils.soliditySha3("Hello world")
 const signature = await web3.eth.sign(message, signer)
 
 // Check if the signature is valid
-const isValid = await isValidSignature(web3, signer, message, signature)
+const isValid = await isValidSignature(web3.currentProvider, signer, message, signature)
 ```
 
 Check signatures for [ERC-1271](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1271.md) contracts
@@ -40,7 +40,7 @@ const message = web3.utils.soliditySha3("Hello world")
 const signature = await web3.eth.sign(message, signer)
 
 // Check if the signature is valid
-const isValid = await isValidSignature(web3, contract.address, message, signature)
+const isValid = await isValidSignature(web3.currentProvider, contract.address, message, signature)
 ```
 
 ## ERC-1271
