@@ -24,26 +24,26 @@ contract('isValidSignature', (accounts) => {
 
   describe('when signing a hash', () => {
     it('should check externally owned account signature', async () => {
-      expect(await isValidSignature(web3, signer, messageHash, messageHashSignature)).to.equal(true)
+      expect(await isValidSignature(signer, messageHash, messageHashSignature, web3)).to.equal(true)
     })
-  
+
     it('should check ERC1271 signature', async () => {
       contract = await AccountMock.new(signer)
-      expect(await isValidSignature(web3, contract.address, messageHash, messageHashSignature)).to.equal(true)
-    })  
+      expect(await isValidSignature(contract.address, messageHash, messageHashSignature, web3)).to.equal(true)
+    })
   })
 
   describe('when signing a string', () => {
     it('should check externally owned account signature', async () => {
-      expect(await isValidSignature(web3, signer, message, messageSignature)).to.equal(true)
+      expect(await isValidSignature(signer, message, messageSignature, web3)).to.equal(true)
     })
-  
+
     it('should check ERC1271 signature', async () => {
       contract = await AccountMock.new(signer)
-      expect(await isValidSignature(web3, contract.address, message, messageSignature)).to.equal(true)
-    })  
+      expect(await isValidSignature(contract.address, message, messageSignature, web3)).to.equal(true)
+    })
   })
-  
+
 })
 
 const normalizeSignature = (signature) => {
