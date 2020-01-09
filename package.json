@@ -1,11 +1,14 @@
 {
   "name": "is-valid-signature",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "ERC-1271 - Check if signature is valid for EOA address or contract-based account",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "truffle test"
+    "test": "truffle test",
+    "publish-module": "npm publish --access public",
+    "dist-tag": "npm dist-tag add \"is-valid-signature@$(jq -r .version <package.json)\" latest",
+    "release": "npm test && npm run publish-module && npm run dist-tag"
   },
   "repository": {
     "type": "git",
@@ -17,14 +20,16 @@
   "homepage": "https://github.com/authereum/is-valid-signature",
   "author": {
     "name": "Chris Whinfrey",
-    "email": "",
+    "email": "chris.whinfrey@authereum.org",
     "url": "https://authereum.org/"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/authereum/is-valid-signature/blob/master/LICENSE"
-  },
+  "contributors": [
+    "Miguel Mota <miguel.mota@authereum.org>",
+    "Shane Fontaine <shane.fontaine@authereum.org>"
+  ],
+  "license": "MIT",
   "dependencies": {
+    "buffer": "^5.4.3",
     "ethers": "^4.0.40"
   },
   "devDependencies": {
