@@ -1,4 +1,4 @@
-pragma solidity 0.5.8;
+pragma solidity ^0.6.0;
 
 import "./IERC1271.sol";
 import "openzeppelin-solidity/contracts/cryptography/ECDSA.sol";
@@ -21,6 +21,7 @@ contract AccountMock is IERC1271 {
     bytes memory _signature
   )
     public
+    override
     view
     returns (bytes4 magicValue)
   {

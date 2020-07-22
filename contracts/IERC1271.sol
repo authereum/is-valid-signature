@@ -1,10 +1,10 @@
-pragma solidity 0.5.8;
+pragma solidity ^0.6.0;
 
-contract IERC1271 {
+interface IERC1271 {
   function isValidSignature(
     bytes memory _messageHash,
     bytes memory _signature)
-    public
+    external
     view
     returns (bytes4 magicValue);
 }
