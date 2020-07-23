@@ -1,8 +1,8 @@
 pragma solidity ^0.6.0;
 
-interface IERC1271 {
+interface IERC1271Bytes {
   function isValidSignature(
-    bytes32 _messageHash,
+    bytes memory _messageHash,
     bytes memory _signature)
     external
     view
