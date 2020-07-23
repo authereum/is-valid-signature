@@ -3,7 +3,7 @@ pragma solidity ^0.6.0;
 import "./IERC1271Bytes.sol";
 import "openzeppelin-solidity/contracts/cryptography/ECDSA.sol";
 
-contract AccountMockAuthereumV1 is IERC1271Bytes {
+contract AuthereumV1Mock is IERC1271Bytes {
   using ECDSA for bytes32;
 
   address public owner;
