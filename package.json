@@ -1,6 +1,6 @@
 {
   "name": "is-valid-signature",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ERC-1271 - Check if signature is valid for EOA address or contract-based account",
   "main": "index.js",
   "types": "index.d.ts",
