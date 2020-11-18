@@ -36,9 +36,7 @@
   "ast": {
     "absolutePath": "/Users/chris/Authereum/is-valid-signature/contracts/IERC1271.sol",
     "exportedSymbols": {
-      "IERC1271": [
-        219
-      ]
+      "IERC1271": [219]
     },
     "id": 220,
     "license": null,
@@ -46,12 +44,7 @@
     "nodes": [
       {
         "id": 209,
-        "literals": [
-          "solidity",
-          "^",
-          "0.6",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.6", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:2"
       },
@@ -63,9 +56,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 219,
-        "linearizedBaseContracts": [
-          219
-        ],
+        "linearizedBaseContracts": [219],
         "name": "IERC1271",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -194,9 +185,7 @@
   "legacyAST": {
     "absolutePath": "/Users/chris/Authereum/is-valid-signature/contracts/IERC1271.sol",
     "exportedSymbols": {
-      "IERC1271": [
-        219
-      ]
+      "IERC1271": [219]
     },
     "id": 220,
     "license": null,
@@ -204,12 +193,7 @@
     "nodes": [
       {
         "id": 209,
-        "literals": [
-          "solidity",
-          "^",
-          "0.6",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.6", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:2"
       },
@@ -221,9 +205,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 219,
-        "linearizedBaseContracts": [
-          219
-        ],
+        "linearizedBaseContracts": [219],
         "name": "IERC1271",
         "nodeType": "ContractDefinition",
         "nodes": [

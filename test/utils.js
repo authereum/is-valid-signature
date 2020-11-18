@@ -1,6 +1,6 @@
 const web3Utils = require('web3-utils')
 
-const normalizeSignature = (signature) => {
+const normalizeSignature = signature => {
   // get the last byte in the signature
   let v = signature.slice(-2)
   // convert it to a number

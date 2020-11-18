@@ -18,11 +18,16 @@ const isValidSignature = require('is-valid-signature')
 const signer = YOUR_SIGNER_ADDRESS
 
 // Get a signature
-const message = web3.utils.soliditySha3("Hello world")
+const message = web3.utils.soliditySha3('Hello world')
 const signature = await web3.eth.sign(message, signer)
 
 // Check if the signature is valid
-const isValid = await isValidSignature(signer, message, signature, web3.currentProvider)
+const isValid = await isValidSignature(
+  signer,
+  message,
+  signature,
+  web3.currentProvider
+)
 ```
 
 Check signatures for [ERC-1271](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1271.md) contracts
@@ -36,11 +41,16 @@ const signer = YOUR_SIGNER_ADDRESS
 const contract = ERC1271.at(YOUR_CONTRACT_ADDRESS)
 
 // Get a signature
-const message = web3.utils.soliditySha3("Hello world")
+const message = web3.utils.soliditySha3('Hello world')
 const signature = await web3.eth.sign(message, signer)
 
 // Check if the signature is valid
-const isValid = await isValidSignature(contract.address, message, signature, web3.currentProvider)
+const isValid = await isValidSignature(
+  contract.address,
+  message,
+  signature,
+  web3.currentProvider
+)
 ```
 
 ## ERC-1271

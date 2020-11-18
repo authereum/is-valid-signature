@@ -11,9 +11,7 @@
   "ast": {
     "absolutePath": "openzeppelin-solidity/contracts/cryptography/ECDSA.sol",
     "exportedSymbols": {
-      "ECDSA": [
-        329
-      ]
+      "ECDSA": [329]
     },
     "id": 330,
     "license": "MIT",
@@ -21,12 +19,7 @@
     "nodes": [
       {
         "id": 233,
-        "literals": [
-          "solidity",
-          "^",
-          "0.6",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.6", ".0"],
         "nodeType": "PragmaDirective",
         "src": "33:23:4"
       },
@@ -43,9 +36,7 @@
         },
         "fullyImplemented": true,
         "id": 329,
-        "linearizedBaseContracts": [
-          329
-        ],
+        "linearizedBaseContracts": [329],
         "name": "ECDSA",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -164,10 +155,7 @@
                             "id": 248,
                             "name": "revert",
                             "nodeType": "Identifier",
-                            "overloadedDeclarations": [
-                              -19,
-                              -19
-                            ],
+                            "overloadedDeclarations": [-19, -19],
                             "referencedDeclaration": -19,
                             "src": "1241:6:4",
                             "typeDescriptions": {
@@ -198,9 +186,7 @@
                   }
                 },
                 {
-                  "assignments": [
-                    255
-                  ],
+                  "assignments": [255],
                   "declarations": [
                     {
                       "constant": false,
@@ -237,9 +223,7 @@
                   "src": "1359:9:4"
                 },
                 {
-                  "assignments": [
-                    258
-                  ],
+                  "assignments": [258],
                   "declarations": [
                     {
                       "constant": false,
@@ -276,9 +260,7 @@
                   "src": "1378:9:4"
                 },
                 {
-                  "assignments": [
-                    261
-                  ],
+                  "assignments": [261],
                   "declarations": [
                     {
                       "constant": false,
@@ -664,10 +646,7 @@
                             "id": 270,
                             "name": "revert",
                             "nodeType": "Identifier",
-                            "overloadedDeclarations": [
-                              -19,
-                              -19
-                            ],
+                            "overloadedDeclarations": [-19, -19],
                             "referencedDeclaration": -19,
                             "src": "2741:6:4",
                             "typeDescriptions": {
@@ -859,10 +838,7 @@
                             "id": 283,
                             "name": "revert",
                             "nodeType": "Identifier",
-                            "overloadedDeclarations": [
-                              -19,
-                              -19
-                            ],
+                            "overloadedDeclarations": [-19, -19],
                             "referencedDeclaration": -19,
                             "src": "2844:6:4",
                             "typeDescriptions": {
@@ -893,9 +869,7 @@
                   }
                 },
                 {
-                  "assignments": [
-                    290
-                  ],
+                  "assignments": [290],
                   "declarations": [
                     {
                       "constant": false,
@@ -1167,10 +1141,7 @@
                       "id": 298,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "3044:7:4",
                       "typeDescriptions": {
@@ -1574,9 +1545,7 @@
   "legacyAST": {
     "absolutePath": "openzeppelin-solidity/contracts/cryptography/ECDSA.sol",
     "exportedSymbols": {
-      "ECDSA": [
-        329
-      ]
+      "ECDSA": [329]
     },
     "id": 330,
     "license": "MIT",
@@ -1584,12 +1553,7 @@
     "nodes": [
       {
         "id": 233,
-        "literals": [
-          "solidity",
-          "^",
-          "0.6",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.6", ".0"],
         "nodeType": "PragmaDirective",
         "src": "33:23:4"
       },
@@ -1606,9 +1570,7 @@
         },
         "fullyImplemented": true,
         "id": 329,
-        "linearizedBaseContracts": [
-          329
-        ],
+        "linearizedBaseContracts": [329],
         "name": "ECDSA",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1727,10 +1689,7 @@
                             "id": 248,
                             "name": "revert",
                             "nodeType": "Identifier",
-                            "overloadedDeclarations": [
-                              -19,
-                              -19
-                            ],
+                            "overloadedDeclarations": [-19, -19],
                             "referencedDeclaration": -19,
                             "src": "1241:6:4",
                             "typeDescriptions": {
@@ -1761,9 +1720,7 @@
                   }
                 },
                 {
-                  "assignments": [
-                    255
-                  ],
+                  "assignments": [255],
                   "declarations": [
                     {
                       "constant": false,
@@ -1800,9 +1757,7 @@
                   "src": "1359:9:4"
                 },
                 {
-                  "assignments": [
-                    258
-                  ],
+                  "assignments": [258],
                   "declarations": [
                     {
                       "constant": false,
@@ -1839,9 +1794,7 @@
                   "src": "1378:9:4"
                 },
                 {
-                  "assignments": [
-                    261
-                  ],
+                  "assignments": [261],
                   "declarations": [
                     {
                       "constant": false,
@@ -2227,10 +2180,7 @@
                             "id": 270,
                             "name": "revert",
                             "nodeType": "Identifier",
-                            "overloadedDeclarations": [
-                              -19,
-                              -19
-                            ],
+                            "overloadedDeclarations": [-19, -19],
                             "referencedDeclaration": -19,
                             "src": "2741:6:4",
                             "typeDescriptions": {
@@ -2422,10 +2372,7 @@
                             "id": 283,
                             "name": "revert",
                             "nodeType": "Identifier",
-                            "overloadedDeclarations": [
-                              -19,
-                              -19
-                            ],
+                            "overloadedDeclarations": [-19, -19],
                             "referencedDeclaration": -19,
                             "src": "2844:6:4",
                             "typeDescriptions": {
@@ -2456,9 +2403,7 @@
                   }
                 },
                 {
-                  "assignments": [
-                    290
-                  ],
+                  "assignments": [290],
                   "declarations": [
                     {
                       "constant": false,
@@ -2730,10 +2675,7 @@
                       "id": 298,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "3044:7:4",
                       "typeDescriptions": {

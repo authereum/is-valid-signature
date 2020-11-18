@@ -61,9 +61,7 @@
   "ast": {
     "absolutePath": "/Users/chris/Authereum/is-valid-signature/contracts/AccountMock.sol",
     "exportedSymbols": {
-      "AccountMock": [
-        55
-      ]
+      "AccountMock": [55]
     },
     "id": 56,
     "license": null,
@@ -71,12 +69,7 @@
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "^",
-          "0.6",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.6", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:0"
       },
@@ -124,17 +117,12 @@
             "src": "140:8:0"
           }
         ],
-        "contractDependencies": [
-          219
-        ],
+        "contractDependencies": [219],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 55,
-        "linearizedBaseContracts": [
-          55,
-          219
-        ],
+        "linearizedBaseContracts": [55, 219],
         "name": "AccountMock",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -396,18 +384,14 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              218
-            ],
+            "baseFunctions": [218],
             "body": {
               "id": 53,
               "nodeType": "Block",
               "src": "589:163:0",
               "statements": [
                 {
-                  "assignments": [
-                    37
-                  ],
+                  "assignments": [37],
                   "declarations": [
                     {
                       "constant": false,
@@ -741,9 +725,7 @@
   "legacyAST": {
     "absolutePath": "/Users/chris/Authereum/is-valid-signature/contracts/AccountMock.sol",
     "exportedSymbols": {
-      "AccountMock": [
-        55
-      ]
+      "AccountMock": [55]
     },
     "id": 56,
     "license": null,
@@ -751,12 +733,7 @@
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "^",
-          "0.6",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.6", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:0"
       },
@@ -804,17 +781,12 @@
             "src": "140:8:0"
           }
         ],
-        "contractDependencies": [
-          219
-        ],
+        "contractDependencies": [219],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 55,
-        "linearizedBaseContracts": [
-          55,
-          219
-        ],
+        "linearizedBaseContracts": [55, 219],
         "name": "AccountMock",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1076,18 +1048,14 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              218
-            ],
+            "baseFunctions": [218],
             "body": {
               "id": 53,
               "nodeType": "Block",
               "src": "589:163:0",
               "statements": [
                 {
-                  "assignments": [
-                    37
-                  ],
+                  "assignments": [37],
                   "declarations": [
                     {
                       "constant": false,
